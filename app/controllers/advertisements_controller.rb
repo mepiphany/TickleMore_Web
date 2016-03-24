@@ -2,6 +2,11 @@ class AdvertisementsController < ApplicationController
 
   def index
     @advertisements = Advertisement.all
+    respond_to do |format|
+      format.html {render}
+      format.json { render json: @advertisements}
+    end
+
   end
 
   def new
