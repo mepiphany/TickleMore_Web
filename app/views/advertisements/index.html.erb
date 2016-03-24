@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Previews</h1>
+  <% @advertisements.each do |ads| %>
+  <div class="well preview">
+    <p><h2>Title: <%= ads.title %></h2></p>
+    <%= image_tag ads.image_url(:preview) %>
+     <p><h3>Cash Value: <%= number_to_currency(ads.cash_value) %></h3></p>
+  </div>
+  <% end %>
+</div>

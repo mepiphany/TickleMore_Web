@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<nav class='navbar navbar-default'>
+  <div class='container-fluid'>
+    <%= link_to 'Home', root_path %> |
+    <%= link_to 'New Advertisement', new_advertisement_path %> |
+    <%= link_to 'Advertisement Previews', advertisements_path %>
+  </div>
+</nav>
+
+<%= notice || alert %>
+
+
+
+
 <%= yield %>
 
 </body>
