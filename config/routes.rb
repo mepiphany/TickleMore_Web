@@ -7,6 +7,23 @@ Rails.application.routes.draw do
       resources :advertisements
     end
   end
+
+  resources :coupons
+
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      resources :coupons
+    end
+  end
+
+  resources :restaurants
+
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      resources :restaurants
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

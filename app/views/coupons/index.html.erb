@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Previews</h1>
+  <% @coupons.each do |coupon| %>
+  <div class="well preview">
+    <%= image_tag coupon.image_url(:thumb) %>
+    <p><h2><%= coupon.title %></h2></p>
+     <h3><%= coupon.description  %></h3>
+  </div>
+  <% end %>
+</div>
