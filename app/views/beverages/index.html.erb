@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Previews</h1>
+  <% @beverages.each do |beverage| %>
+  <div class="well preview">
+    <%= image_tag beverage.image_url(:thumb) %>
+    <p><h2><%= beverage.title %></h2></p>
+     <h3><%= beverage.description  %></h3>
+     <p><h3>Cash Value: <%= number_to_currency(beverage.cash_value) %></h3></p>
+  </div>
+  <% end %>
+</div>
