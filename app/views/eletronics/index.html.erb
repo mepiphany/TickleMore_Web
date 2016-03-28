@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Previews</h1>
+  <% @eletronics.each do |eletronic| %>
+  <div class="well preview">
+    <%= image_tag eletronic.image_url(:thumb) %>
+    <p><h2><%= eletronic.title %></h2></p>
+     <h3><%= eletronic.description  %></h3>
+     <p><h3>Cash Value: <%= number_to_currency(eletronic.cash_value) %></h3></p>
+  </div>
+  <% end %>
+</div>
