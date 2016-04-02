@@ -40,6 +40,18 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      resources :users
+    end
+  end
+
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      resources :breadcrumbs
+    end
+  end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

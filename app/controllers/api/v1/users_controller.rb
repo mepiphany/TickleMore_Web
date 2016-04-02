@@ -1,7 +1,6 @@
-class Api::V1::AdvertisementsController < ApplicationController
-  
+class Api::V1::UsersController < ApplicationController
   def index
-    @advertisements = Advertisement.all
+    @users = User.all
     respond_to do |format|
       format.html {render}
       format.json {render}

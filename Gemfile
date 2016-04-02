@@ -29,6 +29,7 @@ gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'faker'
 
 
 
