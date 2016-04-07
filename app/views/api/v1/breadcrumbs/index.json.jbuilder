@@ -7,5 +7,5 @@ json.breadcrumbs do
 end
 
 json.set! :cash do
-  json.set! :sum, number_to_currency(@breadcrumb_sum)
+  json.set! :sum, number_to_currency(@breadcrumb_sum, unit: "")
 end

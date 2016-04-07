@@ -3,7 +3,7 @@ json.eletronics do
     json.id eletronic.id
     json.title eletronic.title.titleize
     json.description eletronic.description
-    json.c eletronic.cash_value
+    json.c number_to_currency(eletronic.cash_value, unit: '')
     json.image url(eletronic.image.url)
   end
 end

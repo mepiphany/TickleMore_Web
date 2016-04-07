@@ -3,7 +3,7 @@ json.beverages do
     json.id beverage.id
     json.title beverage.title.titleize
     json.description beverage.description
-    json.c beverage.cash_value
+    json.c number_to_currency(beverage.cash_value, unit: '')
     json.image url(beverage.image.url)
   end
 end
