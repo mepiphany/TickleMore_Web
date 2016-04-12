@@ -17,16 +17,21 @@ class Api::V1::RestaurantCartsController < ApplicationController
         format.html {render :html => @post, status: :created}
         format.json {render :json => @post, status: :created}
       end
-
     end
+  end
 
-
+  def destroy
+    @restaurant_cart = RestaurantCart.find(params[:id])
+    @restaurant_cart.destroy
+    respond_to do |format|
+      format.json {head :ok}
+    end
   end
 
   private
 
   def restaurant_cart_params
-    params.require(:restaurant_cart).permit(:title, :cash_value,
+    params.require(:restaurant_cart).permit(:id, :title, :cash_value,
     :description, :image)
   end
 end

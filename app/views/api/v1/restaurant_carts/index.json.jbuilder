@@ -1,5 +1,6 @@
 json.restaurantCarts do
   json.array! @restaurant_carts do |cart|
+    json.id cart.id
     json.title cart.title
     json.description cart.description
     json.cash_value cart.cash_value
